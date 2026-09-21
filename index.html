@@ -3,1213 +3,238 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>NORTH FORGE | مؤسسة نورث فورج للمقاولات</title>
-
-<meta name="description"
-content="NORTH FORGE — مؤسسة نورث فورج للمقاولات. تنفيذ، تشطيبات، تأهيل وأعمال مقاولات بجودة واهتمام بالتفاصيل.">
-
+<meta name="description" content="NORTH FORGE — مؤسسة نورث فورج للمقاولات. أعمال التشطيبات، الديكور والتجهيز، التطوير، وتطوير الشبكات.">
+<title>NORTH FORGE | Building With Purpose.</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <style>
-
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap');
-
 :root{
-    --dark:#071014;
-    --dark2:#0c171b;
-    --dark3:#122126;
-    --gold:#c9a568;
-    --gold-light:#e1c58e;
-    --cream:#f3eee5;
-    --white:#ffffff;
-    --muted:#9ba6a8;
-    --line:rgba(201,165,104,.22);
+  --charcoal:#111411;
+  --green:#172019;
+  --gold:#b08a4a;
+  --gold2:#d0ad70;
+  --stone:#e9e3d6;
+  --cream:#f5f1e8;
+  --muted:#a9aaa3;
+  --line:rgba(208,173,112,.24);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,"Tahoma",sans-serif;background:var(--charcoal);color:var(--cream);line-height:1.8}
+a{color:inherit;text-decoration:none}
+.container{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(17,20,17,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:13px}
+.logo{width:44px;height:44px}
+.brand-name{font-size:18px;letter-spacing:2.8px;font-weight:700;direction:ltr}
+nav{display:flex;gap:28px;font-size:13px;color:#d8d4c9}
+nav a:hover{color:var(--gold2)}
+.hero{min-height:calc(100vh - 82px);display:grid;align-items:center;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:560px;height:560px;border:1px solid var(--line);border-radius:50%;left:-190px;top:80px}
+.hero:after{content:"";position:absolute;width:360px;height:360px;border:1px solid rgba(208,173,112,.12);border-radius:50%;left:-90px;top:180px}
+.hero-content{padding:100px 0;max-width:850px;position:relative;z-index:1}
+.kicker{color:var(--gold2);letter-spacing:4px;font-size:12px;text-transform:uppercase;direction:ltr}
+h1{font-size:clamp(48px,8vw,100px);line-height:.98;letter-spacing:2px;margin:22px 0;direction:ltr}
+.hero h1 span{color:var(--gold2)}
+.hero-ar{font-size:clamp(21px,3vw,34px);font-weight:700;margin-bottom:14px}
+.lead{color:#bfc0b8;max-width:720px;font-size:17px}
+.cta-row{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}
+.btn{padding:13px 22px;border:1px solid var(--gold);font-size:14px;transition:.2s}
+.btn.primary{background:var(--gold);color:#111411}
+.btn:hover{transform:translateY(-2px)}
+section{padding:105px 0;border-top:1px solid rgba(255,255,255,.06)}
+.section-head{display:grid;grid-template-columns:180px 1fr;gap:35px;margin-bottom:55px}
+.num{font-size:12px;color:var(--gold2);letter-spacing:2px;direction:ltr}
+h2{font-size:clamp(32px,4vw,52px);line-height:1.15}
+.section-intro{color:#aaa9a2;max-width:680px;margin-top:15px}
+.services{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.service{min-height:245px;padding:34px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative}
+.service-no{color:var(--gold2);font-size:12px;letter-spacing:2px;direction:ltr}
+.service h3{font-size:25px;margin:25px 0 2px;direction:ltr;text-align:right}
+.service .ar{font-size:18px;font-weight:700}
+.service p{color:#9e9f98;margin-top:12px;font-size:14px;max-width:470px}
+.service:hover{background:rgba(176,138,74,.055)}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px}
+.about-text p{color:#b3b4ad;margin-bottom:18px;font-size:16px}
+.manifesto{border-right:2px solid var(--gold);padding:25px 30px;background:rgba(255,255,255,.025)}
+.manifesto strong{display:block;font-size:27px;line-height:1.4;margin-bottom:12px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
+.card{background:var(--charcoal);padding:34px;min-height:220px}
+.card b{font-size:18px}
+.card p{color:#9e9f98;font-size:14px;margin-top:12px}
+.contact{background:var(--green)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.contact-list{display:grid;gap:18px}
+.contact-item{border-bottom:1px solid var(--line);padding-bottom:15px}
+.contact-item small{display:block;color:var(--gold2);font-size:11px;letter-spacing:2px;direction:ltr}
+.contact-item a,.contact-item span{font-size:18px}
+footer{padding:30px 0;border-top:1px solid var(--line);color:#888980;font-size:12px}
+.footer-flex{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:800px){
+ nav{display:none}
+ .section-head{grid-template-columns:1fr;gap:12px}
+ .services,.cards{grid-template-columns:1fr}
+ .about-grid,.contact-grid{grid-template-columns:1fr;gap:35px}
+ .hero-content{padding:70px 0}
+ h1{font-size:54px}
 }
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
-body{
-    background:var(--dark);
-    color:#fff;
-    font-family:"Cairo",sans-serif;
-    overflow-x:hidden;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-.container{
-    width:min(1180px,92%);
-    margin:auto;
-}
-
-/* ================= HEADER ================= */
-
-header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:999;
-    background:rgba(7,16,20,.88);
-    backdrop-filter:blur(18px);
-    border-bottom:1px solid rgba(255,255,255,.06);
-}
-
-.nav{
-    height:82px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:13px;
-}
-
-.logo-symbol{
-    width:46px;
-    height:46px;
-    border:1px solid var(--gold);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    position:relative;
-}
-
-.logo-symbol::before{
-    content:"N";
-    font-family:Montserrat,sans-serif;
-    font-weight:800;
-    font-size:25px;
-    color:var(--gold-light);
-}
-
-.logo-text{
-    direction:ltr;
-    text-align:left;
-}
-
-.logo-text strong{
-    display:block;
-    font-family:Montserrat,sans-serif;
-    font-size:18px;
-    letter-spacing:2px;
-}
-
-.logo-text span{
-    display:block;
-    font-family:Montserrat,sans-serif;
-    font-size:7px;
-    letter-spacing:2.2px;
-    color:var(--gold);
-    margin-top:5px;
-}
-
-.nav-links{
-    display:flex;
-    align-items:center;
-    gap:28px;
-}
-
-.nav-links a{
-    color:#d3d8d8;
-    font-size:13px;
-    transition:.3s;
-}
-
-.nav-links a:hover{
-    color:var(--gold-light);
-}
-
-.lang-btn{
-    background:transparent;
-    border:1px solid var(--line);
-    color:var(--gold-light);
-    padding:9px 15px;
-    cursor:pointer;
-    font-family:inherit;
-}
-
-.menu-btn{
-    display:none;
-    color:var(--gold);
-    font-size:27px;
-    cursor:pointer;
-}
-
-/* ================= HERO ================= */
-
-.hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    position:relative;
-    overflow:hidden;
-
-    background:
-    radial-gradient(circle at 80% 45%,rgba(201,165,104,.13),transparent 30%),
-    linear-gradient(125deg,#050b0e,#0b1519 55%,#121e22);
-}
-
-.hero::before{
-    content:"";
-    position:absolute;
-    width:650px;
-    height:650px;
-    border:1px solid rgba(201,165,104,.12);
-    border-radius:50%;
-    left:-380px;
-    top:150px;
-}
-
-.hero::after{
-    content:"";
-    position:absolute;
-    width:420px;
-    height:420px;
-    border:1px solid rgba(201,165,104,.08);
-    transform:rotate(45deg);
-    right:-230px;
-    bottom:-250px;
-}
-
-.hero-content{
-    position:relative;
-    z-index:2;
-    max-width:900px;
-}
-
-.hero-kicker{
-    color:var(--gold-light);
-    font-family:Montserrat,sans-serif;
-    font-size:11px;
-    letter-spacing:4px;
-    margin-bottom:28px;
-    direction:ltr;
-}
-
-.hero h1{
-    font-family:Montserrat,"Cairo",sans-serif;
-    font-size:clamp(45px,7vw,88px);
-    line-height:1.03;
-    direction:ltr;
-    text-align:left;
-    letter-spacing:-3px;
-}
-
-.hero h1 span{
-    color:var(--gold-light);
-}
-
-.hero-title-ar{
-    margin-top:30px;
-    font-size:clamp(22px,3vw,34px);
-    font-weight:700;
-}
-
-.hero-description{
-    max-width:700px;
-    margin-top:18px;
-    color:#aeb8ba;
-    line-height:2;
-    font-size:16px;
-}
-
-.hero-actions{
-    display:flex;
-    gap:14px;
-    margin-top:38px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:14px 28px;
-    border:1px solid var(--gold);
-    transition:.3s;
-    font-weight:600;
-}
-
-.btn-gold{
-    background:var(--gold);
-    color:#091013;
-}
-
-.btn-gold:hover{
-    background:var(--gold-light);
-}
-
-.btn-outline{
-    color:var(--gold-light);
-}
-
-.btn-outline:hover{
-    background:rgba(201,165,104,.08);
-}
-
-.hero-mark{
-    position:absolute;
-    right:5%;
-    bottom:7%;
-    font-family:Montserrat,sans-serif;
-    font-weight:800;
-    font-size:180px;
-    color:rgba(255,255,255,.025);
-    direction:ltr;
-}
-
-/* ================= SECTION ================= */
-
-section{
-    padding:110px 0;
-}
-
-.section-label{
-    color:var(--gold);
-    font-family:Montserrat,sans-serif;
-    font-size:10px;
-    letter-spacing:4px;
-    direction:ltr;
-    margin-bottom:14px;
-}
-
-.section-title{
-    font-size:42px;
-    line-height:1.35;
-}
-
-.section-description{
-    margin-top:15px;
-    max-width:700px;
-    color:var(--muted);
-    line-height:2;
-}
-
-/* ================= ABOUT ================= */
-
-.about{
-    background:var(--cream);
-    color:#111a1d;
-}
-
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:70px;
-    align-items:center;
-}
-
-.about .section-title{
-    color:#111a1d;
-}
-
-.about-copy{
-    color:#536063;
-    line-height:2.2;
-    font-size:16px;
-}
-
-.about-panel{
-    background:#e9e3d9;
-    border:1px solid #d3c8b7;
-    padding:45px;
-    position:relative;
-    overflow:hidden;
-}
-
-.about-panel::after{
-    content:"N";
-    position:absolute;
-    left:-25px;
-    bottom:-100px;
-    font-family:Montserrat,sans-serif;
-    font-size:260px;
-    font-weight:800;
-    color:rgba(0,0,0,.035);
-}
-
-.about-panel h3{
-    font-size:27px;
-    margin-bottom:16px;
-}
-
-.about-panel p{
-    color:#5b6668;
-    line-height:2;
-    position:relative;
-    z-index:2;
-}
-
-/* ================= SERVICES ================= */
-
-.services{
-    background:var(--dark2);
-}
-
-.services-grid{
-    margin-top:55px;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:1px;
-    background:var(--line);
-}
-
-.service{
-    background:#0d191d;
-    padding:38px 26px;
-    min-height:280px;
-    transition:.35s;
-}
-
-.service:hover{
-    transform:translateY(-6px);
-    background:#132227;
-}
-
-.service-number{
-    font-family:Montserrat,sans-serif;
-    color:var(--gold);
-    font-size:11px;
-    direction:ltr;
-}
-
-.service-icon{
-    margin:30px 0 20px;
-    font-family:Montserrat,sans-serif;
-    color:var(--gold-light);
-    font-size:31px;
-}
-
-.service h3{
-    font-size:19px;
-    margin-bottom:13px;
-}
-
-.service p{
-    color:#8d999b;
-    line-height:1.9;
-    font-size:13px;
-}
-
-/* ================= APPROACH ================= */
-
-.approach{
-    background:#f2eee6;
-    color:#11191c;
-}
-
-.approach-grid{
-    margin-top:55px;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.step{
-    background:#fff;
-    padding:38px 30px;
-    border-top:3px solid var(--gold);
-}
-
-.step-number{
-    color:#b28b4e;
-    font-family:Montserrat,sans-serif;
-    font-size:12px;
-}
-
-.step h3{
-    margin:20px 0 12px;
-    font-size:20px;
-}
-
-.step p{
-    color:#657073;
-    line-height:2;
-    font-size:14px;
-}
-
-/* ================= CAPABILITIES ================= */
-
-.capabilities{
-    background:var(--dark);
-}
-
-.capability-list{
-    margin-top:55px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:0;
-    border-top:1px solid var(--line);
-}
-
-.capability{
-    padding:27px 10px;
-    border-bottom:1px solid var(--line);
-    display:flex;
-    align-items:center;
-    gap:20px;
-}
-
-.capability-number{
-    font-family:Montserrat,sans-serif;
-    color:var(--gold);
-    width:35px;
-}
-
-.capability strong{
-    font-size:17px;
-}
-
-.capability span{
-    color:#7f8b8e;
-    font-size:13px;
-}
-
-/* ================= TRUST ================= */
-
-.trust{
-    background:
-    linear-gradient(135deg,#0b1519,#17262a);
-    text-align:center;
-}
-
-.trust h2{
-    font-family:Montserrat,"Cairo",sans-serif;
-    font-size:clamp(32px,5vw,58px);
-    direction:ltr;
-}
-
-.trust h2 span{
-    color:var(--gold-light);
-}
-
-.trust p{
-    max-width:650px;
-    margin:20px auto 35px;
-    color:#a6b0b2;
-    line-height:2;
-}
-
-/* ================= CONTACT ================= */
-
-.contact{
-    background:var(--cream);
-    color:#10191c;
-}
-
-.contact-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    margin-top:50px;
-}
-
-.contact-list{
-    display:flex;
-    flex-direction:column;
-}
-
-.contact-item{
-    padding:20px 0;
-    border-bottom:1px solid #d8d0c5;
-}
-
-.contact-item small{
-    display:block;
-    color:#92764c;
-    margin-bottom:7px;
-}
-
-.contact-item strong{
-    font-family:Montserrat,"Cairo",sans-serif;
-    font-size:16px;
-    direction:ltr;
-    display:block;
-}
-
-.contact-card{
-    background:#0b1519;
-    color:white;
-    padding:45px;
-    position:relative;
-    overflow:hidden;
-}
-
-.contact-card::after{
-    content:"NORTH FORGE";
-    position:absolute;
-    left:15px;
-    bottom:-10px;
-    color:rgba(255,255,255,.025);
-    font-family:Montserrat,sans-serif;
-    font-size:55px;
-    font-weight:800;
-    white-space:nowrap;
-}
-
-.contact-card h3{
-    color:var(--gold-light);
-    font-size:26px;
-    margin-bottom:12px;
-}
-
-.contact-card p{
-    color:#aab5b7;
-    line-height:2;
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-    background:#050a0d;
-    padding:35px 0;
-}
-
-.footer{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:20px;
-}
-
-.footer-logo{
-    font-family:Montserrat,sans-serif;
-    font-weight:800;
-    letter-spacing:3px;
-}
-
-.footer-logo span{
-    color:var(--gold);
-}
-
-.footer-info{
-    color:#687477;
-    font-size:11px;
-}
-
-/* ================= MOBILE ================= */
-
-@media(max-width:850px){
-
-    .nav-links{
-        display:none;
-        position:absolute;
-        top:82px;
-        right:0;
-        width:100%;
-        background:#071014;
-        padding:25px;
-        flex-direction:column;
-        border-bottom:1px solid var(--line);
-    }
-
-    .nav-links.active{
-        display:flex;
-    }
-
-    .menu-btn{
-        display:block;
-    }
-
-    .hero{
-        min-height:850px;
-    }
-
-    .hero h1{
-        font-size:52px;
-    }
-
-    .about-grid,
-    .contact-grid{
-        grid-template-columns:1fr;
-        gap:35px;
-    }
-
-    .services-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .approach-grid{
-        grid-template-columns:1fr;
-    }
-
-    .capability-list{
-        grid-template-columns:1fr;
-    }
-
-    .footer{
-        flex-direction:column;
-        text-align:center;
-    }
-}
-
-@media(max-width:550px){
-
-    section{
-        padding:80px 0;
-    }
-
-    .hero h1{
-        font-size:43px;
-    }
-
-    .hero-description{
-        font-size:14px;
-    }
-
-    .services-grid{
-        grid-template-columns:1fr;
-    }
-
-    .section-title{
-        font-size:32px;
-    }
-
-    .about-panel,
-    .contact-card{
-        padding:30px;
-    }
-}
-
 </style>
 </head>
-
 <body>
 
-<!-- ================= HEADER ================= -->
-
 <header>
-
-<div class="container nav">
-
-<a href="#home" class="logo">
-
-<div class="logo-symbol"></div>
-
-<div class="logo-text">
-<strong>NORTH FORGE</strong>
-<span>CONTRACTING EST.</span>
-</div>
-
-</a>
-
-<nav class="nav-links" id="navLinks">
-
-<a href="#home">الرئيسية</a>
-<a href="#about">من نحن</a>
-<a href="#services">خدماتنا</a>
-<a href="#approach">منهجنا</a>
-<a href="#contact">تواصل معنا</a>
-
-<button class="lang-btn" onclick="toggleLanguage()">EN</button>
-
-</nav>
-
-<div class="menu-btn" onclick="toggleMenu()">☰</div>
-
-</div>
-
+  <div class="container nav">
+    <a class="brand" href="#">
+      <img class="logo" src="assets/north-forge-monogram.svg" alt="NORTH FORGE">
+      <span class="brand-name">NORTH FORGE</span>
+    </a>
+    <nav>
+      <a href="#about">من نحن</a>
+      <a href="#services">خدماتنا</a>
+      <a href="#approach">منهجنا</a>
+      <a href="#contact">تواصل معنا</a>
+    </nav>
+  </div>
 </header>
 
-
-<!-- ================= HERO ================= -->
-
-<section class="hero" id="home">
-
-<div class="container">
-
-<div class="hero-content">
-
-<div class="hero-kicker">
-NORTH FORGE · CONTRACTING EST.
-</div>
-
-<h1>
-BUILDING WITH<br>
-<span>PURPOSE.</span>
-</h1>
-
-<div class="hero-title-ar">
-نبني بإتقان... لنصنع غدًا أفضل.
-</div>
-
-<p class="hero-description">
-مؤسسة نورث فورج للمقاولات. نعمل على تقديم حلول تنفيذ
-عملية ومنظمة في أعمال المقاولات والتشطيبات والتأهيل،
-مع اهتمام حقيقي بجودة التفاصيل والالتزام بمتطلبات المشروع.
-</p>
-
-<div class="hero-actions">
-
-<a href="#services" class="btn btn-gold">
-اكتشف خدماتنا
-</a>
-
-<a href="#contact" class="btn btn-outline">
-تواصل معنا
-</a>
-
-</div>
-
-</div>
-
-<div class="hero-mark">NF</div>
-
-</div>
-
+<main>
+<section class="hero">
+  <div class="container hero-content">
+    <div class="kicker">NORTH FORGE</div>
+    <h1>BUILDING <span>WITH</span><br>PURPOSE.</h1>
+    <div class="hero-ar">نبني بإتقان... لنصنع غدًا أفضل.</div>
+    <p class="lead">مؤسسة مقاولات سعودية تعمل بعقلية واضحة: تخطيط دقيق، تنفيذ منضبط، وتشطيبات تُبنى على الجودة والتفاصيل.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="#services">استكشف خدماتنا</a>
+      <a class="btn" href="#contact">تواصل معنا</a>
+    </div>
+  </div>
 </section>
 
-
-<!-- ================= ABOUT ================= -->
-
-<section class="about" id="about">
-
-<div class="container">
-
-<div class="about-grid">
-
-<div>
-
-<div class="section-label">
-ABOUT NORTH FORGE
-</div>
-
-<h2 class="section-title">
-نبني حضورنا<br>
-مشروعًا بعد مشروع.
-</h2>
-
-<br>
-
-<div class="about-copy">
-
-NORTH FORGE مؤسسة مقاولات سعودية تعمل برؤية
-عملية تركز على جودة التنفيذ، وضوح التعامل،
-والاهتمام بالتفاصيل.
-
-نبدأ بخطوات مدروسة، ونسعى إلى بناء علاقات
-مهنية طويلة المدى من خلال الالتزام، التنظيم،
-والحرص على تقديم عمل يليق بثقة العميل.
-
-</div>
-
-</div>
-
-
-<div class="about-panel">
-
-<h3>
-مؤسسة مقاولات<br>
-برؤية واضحة.
-</h3>
-
-<p>
-هدفنا ليس مجرد تنفيذ الأعمال، بل بناء تجربة
-احترافية للعميل تبدأ من وضوح المتطلبات وتمتد
-إلى تنظيم التنفيذ ومتابعة التفاصيل حتى الوصول
-إلى النتيجة المطلوبة.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
+<section id="about">
+  <div class="container">
+    <div class="section-head">
+      <div class="num">01 — ABOUT</div>
+      <div>
+        <h2>نبني بعقلية<br>تتجاوز التنفيذ.</h2>
+        <p class="section-intro">في NORTH FORGE نركز على تحويل المتطلبات إلى أعمال منفذة بوضوح، جودة، وانضباط في التفاصيل.</p>
+      </div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>نؤمن أن العمل المقاولي الجيد لا يبدأ في الموقع فقط، بل يبدأ من فهم الهدف، وترتيب الأولويات، وضبط مراحل التنفيذ.</p>
+        <p>نحافظ على تواصل واضح مع العميل، ونضع الجودة والتفاصيل والتنظيم في قلب كل مرحلة من مراحل العمل.</p>
+        <p>نحن مؤسسة نورث فورج للمقاولات، ونسعى لبناء علاقة مهنية طويلة الأمد من خلال نتائج يمكن الاعتماد عليها.</p>
+      </div>
+      <div class="manifesto">
+        <strong>وضوح في التخطيط.<br>دقة في التنفيذ.<br>قيمة تدوم.</strong>
+        <span style="color:#999a92">BUILDING WITH PURPOSE.</span>
+      </div>
+    </div>
+  </div>
 </section>
 
-
-<!-- ================= SERVICES ================= -->
-
-<section class="services" id="services">
-
-<div class="container">
-
-<div class="section-label">
-WHAT WE DO
-</div>
-
-<h2 class="section-title">
-مجالات عملنا
-</h2>
-
-<p class="section-description">
-نركز على تقديم أعمال مقاولات عملية ومنظمة،
-وفق نطاق المشروع ومتطلباته الفعلية.
-</p>
-
-
-<div class="services-grid">
-
-<div class="service">
-
-<div class="service-number">01</div>
-
-<div class="service-icon">01</div>
-
-<h3>
-أعمال المقاولات
-</h3>
-
-<p>
-تنفيذ أعمال المقاولات وفق نطاق المشروع
-والمواصفات المعتمدة ومتطلبات العميل.
-</p>
-
-</div>
-
-
-<div class="service">
-
-<div class="service-number">02</div>
-
-<div class="service-icon">02</div>
-
-<h3>
-التشطيبات
-</h3>
-
-<p>
-تنفيذ أعمال التشطيبات الداخلية والخارجية
-مع الاهتمام بجودة المواد ودقة التفاصيل.
-</p>
-
-</div>
-
-
-<div class="service">
-
-<div class="service-number">03</div>
-
-<div class="service-icon">03</div>
-
-<h3>
-التأهيل والترميم
-</h3>
-
-<p>
-تنفيذ أعمال التأهيل والترميم والتطوير
-وفق حالة الموقع ونطاق الأعمال المطلوبة.
-</p>
-
-</div>
-
-
-<div class="service">
-
-<div class="service-number">04</div>
-
-<div class="service-icon">04</div>
-
-<h3>
-تنفيذ الأعمال
-</h3>
-
-<p>
-تنظيم مراحل التنفيذ ومتابعة الأعمال
-بمنهج عملي يركز على الجودة والانضباط.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="num">02 — SERVICES</div>
+      <div>
+        <h2>مجالاتنا الأساسية.</h2>
+        <p class="section-intro">نبدأ بمجالات محددة وواضحة، مع قابلية التوسع وفق نطاق الأعمال والاحتياج.</p>
+      </div>
+    </div>
+    <div class="services">
+      <article class="service">
+        <div class="service-no">01 / FIT-OUT</div>
+        <h3>FIT-OUT</h3>
+        <div class="ar">أعمال التشطيبات</div>
+        <p>تنفيذ أعمال التشطيب والتجهيز الداخلي وفق متطلبات المشروع ومستوى الجودة المستهدف.</p>
+      </article>
+      <article class="service">
+        <div class="service-no">02 / INTERIORS</div>
+        <h3>INTERIORS</h3>
+        <div class="ar">الديكور والتجهيز</div>
+        <p>أعمال وتجهيزات داخلية تهتم بالتفاصيل، الخامات، والتكامل بين العناصر المنفذة.</p>
+      </article>
+      <article class="service">
+        <div class="service-no">03 / DEVELOPMENT</div>
+        <h3>DEVELOPMENT</h3>
+        <div class="ar">التطوير</div>
+        <p>تطوير وتحسين المساحات والمنشآت من خلال حلول تنفيذية عملية ومدروسة.</p>
+      </article>
+      <article class="service">
+        <div class="service-no">04 / NETWORKS</div>
+        <h3>NETWORKS</h3>
+        <div class="ar">تطوير الشبكات</div>
+        <p>أعمال مرتبطة بتطوير وتجهيز البنية الشبكية ضمن نطاق المشروع ومتطلباته.</p>
+      </article>
+    </div>
+  </div>
 </section>
 
-
-<!-- ================= APPROACH ================= -->
-
-<section class="approach" id="approach">
-
-<div class="container">
-
-<div class="section-label">
-OUR APPROACH
-</div>
-
-<h2 class="section-title">
-منهجنا في العمل
-</h2>
-
-<p class="section-description">
-نؤمن أن جودة التنفيذ تبدأ قبل دخول الموقع،
-وتستمر من خلال التنظيم والمتابعة والاهتمام بالتفاصيل.
-</p>
-
-
-<div class="approach-grid">
-
-<div class="step">
-
-<div class="step-number">01 / UNDERSTAND</div>
-
-<h3>
-نفهم
-</h3>
-
-<p>
-نبدأ بفهم احتياجات المشروع ونطاق الأعمال
-والتوقعات المطلوبة قبل التنفيذ.
-</p>
-
-</div>
-
-
-<div class="step">
-
-<div class="step-number">02 / EXECUTE</div>
-
-<h3>
-ننّفذ
-</h3>
-
-<p>
-نحوّل المتطلبات إلى أعمال تنفيذية منظمة
-مع التركيز على التفاصيل وجودة العمل.
-</p>
-
-</div>
-
-
-<div class="step">
-
-<div class="step-number">03 / DELIVER</div>
-
-<h3>
-نسلّم
-</h3>
-
-<p>
-نسعى إلى تسليم الأعمال بصورة منظمة
-وبما يتوافق مع نطاق المشروع ومتطلباته.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
+<section id="approach">
+  <div class="container">
+    <div class="section-head">
+      <div class="num">03 — APPROACH</div>
+      <div>
+        <h2>منهجنا في العمل.</h2>
+        <p class="section-intro">نحوّل العمل إلى خطوات واضحة، ونحافظ على الانضباط من بداية المهمة حتى التسليم.</p>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card"><b>01 — نفهم</b><p>نبدأ بفهم المتطلبات والنطاق والأولويات قبل الدخول في التنفيذ.</p></div>
+      <div class="card"><b>02 — نخطط</b><p>نرتب مراحل العمل ونحدد ما يلزم للوصول إلى نتيجة واضحة ومنظمة.</p></div>
+      <div class="card"><b>03 — ننفذ</b><p>نركز على جودة التنفيذ والتفاصيل والتنسيق أثناء العمل.</p></div>
+    </div>
+  </div>
 </section>
 
-
-<!-- ================= CAPABILITIES ================= -->
-
-<section class="capabilities">
-
-<div class="container">
-
-<div class="section-label">
-OUR PRINCIPLES
-</div>
-
-<h2 class="section-title">
-ما نؤمن به
-</h2>
-
-<div class="capability-list">
-
-<div class="capability">
-<div class="capability-number">01</div>
-<strong>الجودة</strong>
-<span>الاهتمام بتفاصيل التنفيذ.</span>
-</div>
-
-<div class="capability">
-<div class="capability-number">02</div>
-<strong>الوضوح</strong>
-<span>تواصل واضح مع العميل.</span>
-</div>
-
-<div class="capability">
-<div class="capability-number">03</div>
-<strong>الالتزام</strong>
-<span>احترام نطاق ومتطلبات المشروع.</span>
-</div>
-
-<div class="capability">
-<div class="capability-number">04</div>
-<strong>التنظيم</strong>
-<span>عمل منظم في كل مرحلة.</span>
-</div>
-
-</div>
-
-</div>
-
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div class="num">04 — PRINCIPLES</div>
+      <div>
+        <h2>مبادئ لا نتنازل عنها.</h2>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card"><b>الجودة</b><p>الجودة ليست مرحلة نهائية؛ بل معيار يرافق كل خطوة.</p></div>
+      <div class="card"><b>الوضوح</b><p>تواصل واضح وتوقعات مفهومة وقرارات مبنية على المعلومات.</p></div>
+      <div class="card"><b>الالتزام</b><p>نحترم الوقت والنطاق والتفاصيل المتفق عليها.</p></div>
+    </div>
+  </div>
 </section>
 
-
-<!-- ================= TRUST ================= -->
-
-<section class="trust">
-
-<div class="container">
-
-<h2>
-BUILDING WITH <span>PURPOSE.</span>
-</h2>
-
-<p>
-نبدأ اليوم، ونبني خطوة بخطوة.
-هدفنا أن يكون كل مشروع بداية لعلاقة مهنية طويلة.
-</p>
-
-<a href="#contact" class="btn btn-gold">
-ابدأ معنا
-</a>
-
-</div>
-
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="section-head">
+      <div class="num">05 — CONTACT</div>
+      <div>
+        <h2>لنبدأ من الفكرة.</h2>
+        <p class="section-intro">للاستفسارات والتواصل حول الأعمال والمشروعات، يسعدنا استقبال رسالتكم.</p>
+      </div>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="kicker">NORTH FORGE</div>
+        <h2 style="font-size:34px;margin-top:18px">BUILDING WITH PURPOSE.</h2>
+        <p style="color:#aaa;margin-top:15px">مؤسسة نورث فورج للمقاولات</p>
+      </div>
+      <div class="contact-list">
+        <div class="contact-item"><small>EMAIL</small><a href="mailto:northforge.sa@gmail.com">northforge.sa@gmail.com</a></div>
+        <div class="contact-item"><small>LOCATION</small><span>القصيم – بريدة – المملكة العربية السعودية</span></div>
+        <div class="contact-item"><small>COMMERCIAL REGISTRATION</small><span>7053302951</span></div>
+      </div>
+    </div>
+  </div>
 </section>
-
-
-<!-- ================= CONTACT ================= -->
-
-<section class="contact" id="contact">
-
-<div class="container">
-
-<div class="section-label">
-CONTACT NORTH FORGE
-</div>
-
-<h2 class="section-title">
-لنتحدث عن مشروعك.
-</h2>
-
-<div class="contact-grid">
-
-<div class="contact-list">
-
-<div class="contact-item">
-
-<small>
-البريد الإلكتروني
-</small>
-
-<strong>
-northforge.sa@gmail.com
-</strong>
-
-</div>
-
-
-<div class="contact-item">
-
-<small>
-المملكة العربية السعودية
-</small>
-
-<strong>
-Saudi Arabia
-</strong>
-
-</div>
-
-
-<div class="contact-item">
-
-<small>
-السجل التجاري
-</small>
-
-<strong>
-7053302951
-</strong>
-
-</div>
-
-</div>
-
-
-<div class="contact-card">
-
-<h3>
-NORTH FORGE
-</h3>
-
-<p>
-مؤسسة نورث فورج للمقاولات
-</p>
-
-<br>
-
-<p>
-CONTRACTING EST.
-</p>
-
-<br>
-
-<a href="mailto:northforge.sa@gmail.com"
-class="btn btn-outline">
-راسلنا عبر البريد
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= FOOTER ================= -->
+</main>
 
 <footer>
-
-<div class="container footer">
-
-<div class="footer-logo">
-NORTH <span>FORGE</span>
-</div>
-
-<div class="footer-info">
-مؤسسة نورث فورج للمقاولات · سجل تجاري 7053302951
-</div>
-
-<div class="footer-info">
-© 2026 NORTH FORGE
-</div>
-
-</div>
-
+  <div class="container footer-flex">
+    <span>© 2026 NORTH FORGE. All rights reserved.</span>
+    <span>نبني بإتقان... لنصنع غدًا أفضل.</span>
+  </div>
 </footer>
-
-
-<script>
-
-function toggleMenu(){
-
-document
-.getElementById("navLinks")
-.classList
-.toggle("active");
-
-}
-
-
-function toggleLanguage(){
-
-alert("النسخة الإنجليزية سيتم تطويرها في المرحلة التالية.");
-
-}
-
-</script>
-
 </body>
 </html>
