@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NORTH FORGE | Engineering a Brighter Tomorrow</title>
+
+<meta name="description"
+content="NORTH FORGE — Engineering, project management and architectural solutions. Engineering a Brighter Tomorrow.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+:root{
+    --black:#071014;
+    --black2:#0d171b;
+    --gold:#c8a46b;
+    --gold2:#e1c48d;
+    --cream:#f4f0e8;
+    --white:#ffffff;
+    --gray:#9ba5a7;
+    --line:rgba(200,164,107,.25);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--black);
+    color:var(--white);
+    font-family:"Cairo",sans-serif;
+    overflow-x:hidden;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(7,16,20,.86);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,255,255,.07);
+}
+
+.nav{
+    height:82px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    direction:ltr;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:13px;
+}
+
+.logo-mark{
+    width:45px;
+    height:45px;
+    border:1px solid var(--gold);
+    display:grid;
+    place-items:center;
+    position:relative;
+}
+
+.logo-mark span{
+    font-family:Montserrat,sans-serif;
+    font-size:22px;
+    font-weight:800;
+    color:var(--gold2);
+    letter-spacing:-5px;
+    transform:translateX(-2px);
+}
+
+.logo-text{
+    text-align:left;
+    line-height:1;
+}
+
+.logo-text strong{
+    display:block;
+    font-family:Montserrat,sans-serif;
+    font-size:18px;
+    letter-spacing:2px;
+}
+
+.logo-text small{
+    display:block;
+    color:var(--gold);
+    font-size:7px;
+    letter-spacing:2px;
+    margin-top:6px;
+    font-family:Montserrat,sans-serif;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+    align-items:center;
+    font-size:13px;
+}
+
+.nav-links a{
+    color:#d5dada;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--gold2);
+}
+
+.lang{
+    border:1px solid var(--line);
+    padding:8px 14px;
+    color:var(--gold2);
+    cursor:pointer;
+    background:transparent;
+}
+
+.menu{
+    display:none;
+    font-size:28px;
+    color:var(--gold);
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at 78% 35%,rgba(200,164,107,.15),transparent 32%),
+        linear-gradient(120deg,#050b0e,#0d171b 55%,#111c20);
+}
+
+.hero:before{
+    content:"";
+    position:absolute;
+    width:650px;
+    height:650px;
+    border:1px solid rgba(200,164,107,.15);
+    border-radius:50%;
+    left:-250px;
+    top:180px;
+}
+
+.hero:after{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border:1px solid rgba(200,164,107,.09);
+    transform:rotate(45deg);
+    right:-200px;
+    bottom:-250px;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:780px;
+}
+
+.eyebrow{
+    color:var(--gold2);
+    font-size:13px;
+    letter-spacing:4px;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-family:Montserrat,"Cairo",sans-serif;
+    font-size:clamp(45px,7vw,88px);
+    line-height:1.02;
+    letter-spacing:-3px;
+    direction:ltr;
+    text-align:left;
+}
+
+.hero h1 span{
+    color:var(--gold2);
+}
+
+.hero p{
+    margin-top:30px;
+    color:#c0c8c9;
+    font-size:17px;
+    line-height:2;
+    max-width:650px;
+}
+
+.hero-buttons{
+    margin-top:40px;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:14px 28px;
+    border:1px solid var(--gold);
+    transition:.3s;
+    font-weight:600;
+}
+
+.btn-primary{
+    background:var(--gold);
+    color:#081013;
+}
+
+.btn-primary:hover{
+    background:var(--gold2);
+}
+
+.btn-outline{
+    color:var(--gold2);
+}
+
+.btn-outline:hover{
+    background:rgba(200,164,107,.1);
+}
+
+.hero-number{
+    position:absolute;
+    right:4%;
+    bottom:9%;
+    color:rgba(255,255,255,.05);
+    font-family:Montserrat;
+    font-size:180px;
+    font-weight:800;
+    direction:ltr;
+}
+
+/* ================= SECTION ================= */
+
+section{
+    padding:110px 0;
+}
+
+.section-head{
+    margin-bottom:55px;
+}
+
+.section-kicker{
+    color:var(--gold);
+    font-family:Montserrat,sans-serif;
+    font-size:11px;
+    letter-spacing:4px;
+    margin-bottom:14px;
+    direction:ltr;
+}
+
+.section-head h2{
+    font-size:42px;
+    line-height:1.3;
+}
+
+.section-head p{
+    margin-top:15px;
+    color:var(--gray);
+    max-width:700px;
+    line-height:2;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+    background:var(--cream);
+    color:#10191c;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:80px;
+    align-items:center;
+}
+
+.about .section-head h2{
+    color:#10191c;
+}
+
+.about-text{
+    font-size:16px;
+    line-height:2.1;
+    color:#4e585a;
+}
+
+.about-card{
+    border:1px solid #d5cbbd;
+    padding:38px;
+    position:relative;
+    background:#eee9df;
+}
+
+.about-card:before{
+    content:"N";
+    position:absolute;
+    font-family:Montserrat;
+    font-size:220px;
+    font-weight:800;
+    color:rgba(0,0,0,.035);
+    right:20px;
+    bottom:-55px;
+}
+
+.about-card h3{
+    color:#11191c;
+    font-size:25px;
+    margin-bottom:15px;
+}
+
+.about-card p{
+    color:#596265;
+    line-height:2;
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+    background:#091317;
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1px;
+    background:var(--line);
+}
+
+.service{
+    background:#0d191d;
+    padding:38px 25px;
+    min-height:260px;
+    transition:.35s;
+}
+
+.service:hover{
+    background:#132126;
+    transform:translateY(-6px);
+}
+
+.service-number{
+    color:var(--gold);
+    font-family:Montserrat;
+    font-size:12px;
+    direction:ltr;
+}
+
+.service-icon{
+    font-size:35px;
+    margin:28px 0 20px;
+    color:var(--gold2);
+}
+
+.service h3{
+    font-size:19px;
+    margin-bottom:12px;
+}
+
+.service p{
+    color:#8e9b9e;
+    line-height:1.9;
+    font-size:13px;
+}
+
+/* ================= PROJECTS ================= */
+
+.projects{
+    background:#f1eee7;
+    color:#11191c;
+}
+
+.projects .section-head h2{
+    color:#11191c;
+}
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.project{
+    height:390px;
+    position:relative;
+    overflow:hidden;
+    background:
+        linear-gradient(145deg,#26363a,#11191c);
+}
+
+.project:nth-child(2){
+    background:
+        linear-gradient(145deg,#50473b,#15191a);
+}
+
+.project:nth-child(3){
+    background:
+        linear-gradient(145deg,#34484b,#101719);
+}
+
+.project:before{
+    content:"";
+    position:absolute;
+    inset:25px;
+    border:1px solid rgba(255,255,255,.17);
+}
+
+.project-info{
+    position:absolute;
+    right:28px;
+    left:28px;
+    bottom:28px;
+    color:white;
+}
+
+.project-info small{
+    color:var(--gold2);
+    font-family:Montserrat;
+    letter-spacing:2px;
+}
+
+.project-info h3{
+    margin-top:8px;
+    font-size:24px;
+}
+
+/* ================= VALUES ================= */
+
+.values{
+    background:var(--black);
+}
+
+.values-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.value{
+    padding:35px;
+    border-top:1px solid var(--line);
+}
+
+.value span{
+    color:var(--gold);
+    font-family:Montserrat;
+    font-size:30px;
+}
+
+.value h3{
+    margin:20px 0 10px;
+}
+
+.value p{
+    color:#899497;
+    line-height:2;
+    font-size:14px;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+    background:
+        linear-gradient(rgba(8,15,18,.88),rgba(8,15,18,.94)),
+        linear-gradient(135deg,#6b5a42,#111);
+    text-align:center;
+}
+
+.cta h2{
+    font-family:Montserrat,"Cairo";
+    font-size:clamp(35px,5vw,62px);
+    direction:ltr;
+}
+
+.cta h2 span{
+    color:var(--gold2);
+}
+
+.cta p{
+    color:#aab2b3;
+    margin:20px auto 35px;
+    max-width:600px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+    background:#f5f2eb;
+    color:#11191c;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+}
+
+.contact-info{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+.contact-item{
+    padding-bottom:20px;
+    border-bottom:1px solid #ddd5c9;
+}
+
+.contact-item small{
+    color:#8a7a61;
+    display:block;
+    margin-bottom:5px;
+}
+
+.contact-item strong{
+    font-family:Montserrat;
+    font-size:17px;
+    direction:ltr;
+    display:block;
+}
+
+.contact-box{
+    background:#101a1e;
+    color:white;
+    padding:45px;
+    position:relative;
+    overflow:hidden;
+}
+
+.contact-box:after{
+    content:"NORTH FORGE";
+    position:absolute;
+    bottom:15px;
+    left:20px;
+    font-family:Montserrat;
+    font-size:55px;
+    color:rgba(255,255,255,.025);
+    font-weight:800;
+    white-space:nowrap;
+}
+
+.contact-box h3{
+    color:var(--gold2);
+    font-size:25px;
+    margin-bottom:15px;
+}
+
+.contact-box p{
+    color:#aeb7b8;
+    line-height:2;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#050a0d;
+    padding:40px 0;
+    border-top:1px solid rgba(255,255,255,.06);
+}
+
+.footer-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.footer-brand{
+    font-family:Montserrat;
+    letter-spacing:3px;
+    font-weight:700;
+}
+
+.footer-brand span{
+    color:var(--gold);
+}
+
+.footer-copy{
+    color:#657174;
+    font-size:12px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:850px){
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:82px;
+        right:0;
+        width:100%;
+        background:#071014;
+        padding:25px;
+        flex-direction:column;
+        border-bottom:1px solid var(--line);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu{
+        display:block;
+        cursor:pointer;
+    }
+
+    .hero{
+        min-height:850px;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .services-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .projects-grid{
+        grid-template-columns:1fr;
+    }
+
+    .values-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-inner{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+@media(max-width:550px){
+
+    section{
+        padding:80px 0;
+    }
+
+    .services-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .section-head h2{
+        font-size:32px;
+    }
+
+    .contact-box{
+        padding:30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+
+<a class="logo" href="#home">
+    <div class="logo-mark">
+        <span>N</span>
+    </div>
+    <div class="logo-text">
+        <strong>NORTH FORGE</strong>
+        <small>ENGINEERING CONSULTANCY</small>
+    </div>
+</a>
+
+<nav class="nav-links" id="navLinks">
+    <a href="#home">الرئيسية</a>
+    <a href="#about">من نحن</a>
+    <a href="#services">خدماتنا</a>
+    <a href="#projects">مشاريعنا</a>
+    <a href="#contact">تواصل معنا</a>
+    <button class="lang" onclick="toggleLanguage()">EN</button>
+</nav>
+
+<div class="menu" onclick="toggleMenu()">☰</div>
+
+</div>
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+<div class="container">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+NORTH FORGE · ENGINEERING CONSULTANCY
+</div>
+
+<h1>
+Engineering<br>
+a <span>Brighter</span><br>
+Tomorrow
+</h1>
+
+<p>
+نحوّل الأفكار الهندسية إلى حلول واقعية،
+ونجمع بين التصميم والإدارة والإشراف والخبرة
+لصناعة مشاريع أكثر جودة وكفاءة واستدامة.
+</p>
+
+<div class="hero-buttons">
+<a href="#services" class="btn btn-primary">استكشف خدماتنا</a>
+<a href="#contact" class="btn btn-outline">تواصل معنا</a>
+</div>
+
+</div>
+
+<div class="hero-number">01</div>
+
+</div>
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="container">
+
+<div class="about-grid">
+
+<div>
+<div class="section-head">
+<div class="section-kicker">ABOUT NORTH FORGE</div>
+<h2>نبني قيمة تتجاوز حدود المشروع.</h2>
+</div>
+
+<div class="about-text">
+NORTH FORGE هي مؤسسة هندسية تهدف إلى تقديم حلول
+احترافية تجمع بين الرؤية المعمارية والإدارة الهندسية
+والإشراف على التنفيذ.
+
+نعمل بمنهج يعتمد على الدقة، وضوح التفاصيل،
+وفهم احتياجات المشروع منذ الفكرة وحتى التنفيذ.
+</div>
+</div>
+
+<div class="about-card">
+<h3>هندسة برؤية مختلفة</h3>
+
+<p>
+نؤمن أن المشروع الناجح لا يعتمد فقط على جودة التصميم،
+بل على التكامل بين التخطيط، التصميم، الإدارة، التنفيذ
+والرقابة على الجودة.
+
+هدفنا هو خلق قيمة حقيقية ومستدامة لكل مشروع نتولى
+المشاركة فيه.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+<div class="container">
+
+<div class="section-head">
+<div class="section-kicker">OUR EXPERTISE</div>
+<h2>خدماتنا</h2>
+<p>
+حلول هندسية متكاملة مصممة لتلبية متطلبات المشاريع
+الحديثة بمستويات عالية من الجودة والتنظيم.
+</p>
+</div>
+
+<div class="services-grid">
+
+<div class="service">
+<div class="service-number">01</div>
+<div class="service-icon">⌂</div>
+<h3>التصميم المعماري</h3>
+<p>
+تصميم وتطوير الحلول المعمارية بما يحقق الوظيفة
+والجمال والكفاءة.
+</p>
+</div>
+
+<div class="service">
+<div class="service-number">02</div>
+<div class="service-icon">⌁</div>
+<h3>إدارة المشاريع</h3>
+<p>
+إدارة ومتابعة المشاريع وتحقيق التكامل بين الوقت
+والتكلفة والجودة.
+</p>
+</div>
+
+<div class="service">
+<div class="service-number">03</div>
+<div class="service-icon">◇</div>
+<h3>الإشراف الهندسي</h3>
+<p>
+متابعة التنفيذ ومراقبة الجودة والتأكد من مطابقة
+الأعمال للمخططات والمواصفات.
+</p>
+</div>
+
+<div class="service">
+<div class="service-number">04</div>
+<div class="service-icon">◌</div>
+<h3>الاستشارات الهندسية</h3>
+<p>
+دعم فني واستشاري يساعد أصحاب المشاريع على اتخاذ
+قرارات أكثر وضوحًا.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- PROJECTS -->
+
+<section class="projects" id="projects">
+
+<div class="container">
+
+<div class="section-head">
+<div class="section-kicker">SELECTED WORK</div>
+<h2>مشاريع وخبرات</h2>
+<p>
+مساحات نعمل من خلالها على تحويل الرؤية إلى واقع
+هندسي قابل للتنفيذ.
+</p>
+</div>
+
+<div class="projects-grid">
+
+<div class="project">
+<div class="project-info">
+<small>ARCHITECTURE</small>
+<h3>التصميم والتطوير</h3>
+</div>
+</div>
+
+<div class="project">
+<div class="project-info">
+<small>PROJECT MANAGEMENT</small>
+<h3>إدارة المشاريع</h3>
+</div>
+</div>
+
+<div class="project">
+<div class="project-info">
+<small>ENGINEERING</small>
+<h3>الإشراف والاستشارات</h3>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- VALUES -->
+
+<section class="values">
+
+<div class="container">
+
+<div class="section-head">
+<div class="section-kicker">OUR VALUES</div>
+<h2>ما الذي يميز NORTH FORGE؟</h2>
+</div>
+
+<div class="values-grid">
+
+<div class="value">
+<span>01</span>
+<h3>الدقة</h3>
+<p>
+نولي التفاصيل أهمية أساسية لأنها تصنع الفارق
+في جودة المشروع.
+</p>
+</div>
+
+<div class="value">
+<span>02</span>
+<h3>الالتزام</h3>
+<p>
+نؤمن بالوضوح والمسؤولية والالتزام تجاه العميل
+والمشروع.
+</p>
+</div>
+
+<div class="value">
+<span>03</span>
+<h3>الرؤية</h3>
+<p>
+ننظر إلى المشروع كمنظومة متكاملة وليس كمجموعة
+من الأعمال المنفصلة.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container">
+
+<h2>
+Engineering a <span>Brighter Tomorrow</span>
+</h2>
+
+<p>
+هل لديك مشروع أو فكرة تحتاج إلى رؤية هندسية احترافية؟
+يسعدنا أن نتواصل معك.
+</p>
+
+<a href="#contact" class="btn btn-primary">
+ابدأ محادثة
+</a>
+
+</div>
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="section-head">
+<div class="section-kicker">CONTACT NORTH FORGE</div>
+<h2>لنبنِ المستقبل معًا.</h2>
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-info">
+
+<div class="contact-item">
+<small>البريد الإلكتروني</small>
+<strong>northforge.sa@gmail.com</strong>
+</div>
+
+<div class="contact-item">
+<small>المملكة العربية السعودية</small>
+<strong>Qassim · Saudi Arabia</strong>
+</div>
+
+<div class="contact-item">
+<small>السجل التجاري</small>
+<strong>7053302951</strong>
+</div>
+
+</div>
+
+<div class="contact-box">
+
+<h3>NORTH FORGE</h3>
+
+<p>
+ENGINEERING CONSULTANCY
+</p>
+
+<p>
+هندسة • إدارة مشاريع • إشراف • استشارات
+</p>
+
+<br>
+
+<p>
+Engineering a Brighter Tomorrow
+</p>
+
+</div>
+
+</div>
+</div>
+</section>
+
+</main>
+
+
+<footer>
+
+<div class="container footer-inner">
+
+<div class="footer-brand">
+NORTH <span>FORGE</span>
+</div>
+
+<div class="footer-copy">
+© 2026 NORTH FORGE. All Rights Reserved.
+</div>
+
+</div>
+
+</footer>
+
+
+<script>
+
+function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("active");
+}
+
+function toggleLanguage(){
+
+    const body = document.body;
+
+    if(body.getAttribute("dir") === "rtl"){
+        body.setAttribute("dir","ltr");
+        document.documentElement.setAttribute("lang","en");
+
+        document.querySelector(".lang").innerText="عربي";
+
+    }else{
+        body.setAttribute("dir","rtl");
+        document.documentElement.setAttribute("lang","ar");
+
+        document.querySelector(".lang").innerText="EN";
+    }
+}
+
+</script>
+
+</body>
+</html>
